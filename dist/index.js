@@ -1,5 +1,10 @@
 // cache DOM
+const hamburgerBtns = document.querySelectorAll('.hamburger');
 const dropdownMenus = document.querySelectorAll('.dropdown-menu');
+
+// add event listeners
+hamburgerBtns.forEach(btn => btn.addEventListener('click', toggleDropdown));
+document.addEventListener('click', hideDropDown);
 
 // toggle matching dropdown menu on hamburger button click
 function toggleDropdown(e) {
